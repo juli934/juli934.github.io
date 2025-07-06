@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Introduction</title>
+    <style>
+        body {
+            background-color: #9f849c;
+        }
+        .parent{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .image{
+            position: absolute;
+            width: 380px;
+            height: 500px;
+            top: 20%;
+            left: 40%;
+            border: 1em floralwhite;
+            border-radius: 3em;
+
+        }
+        .header{
+            position: absolute;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 2em;
+           width: 100%;
+            left: 37%;
+        }
+        .text{
+            position: absolute;
+            width: 70%;
+            top: 10%;
+            font-family: Verdana , Geneva, sans-serif;
+            font-size: 1em;
+            color: linen;
+            text-align: center;
+            left: 15%;
+        }
+    </style>
 </head>
 <body>
-<h1>Julianna Sells- Portfolio</h1>
-<p>I am a Graphic Designer based in South Alabama/ Pensacola Florida.
-I hope to display my work to future employers here. </p>
-<img src="julianna.JPG" alt="julianna in sunglasses" width="300" height="400">
-<a href="gifshowcase.html">gifshowcase</a>
-<a href="page2.html">page2</a>
-<a href="page3.html">page3</a>
-<a href="net.art1.html">net.art1</a>
-<a href="net.art2.html">net.art2</a>
-<a href="net.art3.html">net.art3</a>
-<a href="story-pt.1.html">story assignment</a>
-and <a href="p5-landscape.html">p5 Landscape</a>
+<h1 class="header">Julianna Sells- Portfolio</h1>
+<p class="text">I am a Graphic Designer based in South Alabama/ Pensacola Florida.
+I hope to display my work to future employers here. Continue browsing to see my current work in my online course. Some work from other courses can be found on <a href="page2.html">page2</a> and <a href="page3.html">page3</a>. I completed a <a href="gifshowcase.html">gifshowcase</a> with animations. My collages are found under <a href="net.art1.html">net.art1</a>, <a href="net.art2.html">net.art2</a> and <a href="net.art3.html">net.art3</a>. My Most recent assignments include a <a href="story-pt.1.html">storyline</a> and <a href="p5-landscape.html">landscape</a> made in p5.js. </p>
 </body>
+<div class="parent">
+    <img class="image" src="julianna.JPG">
+</div>
 </html>
