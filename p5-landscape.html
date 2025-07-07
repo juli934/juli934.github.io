@@ -3,20 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>p5 Landscape</title>
+    <style>
+        body{
+            background-color: darksalmon;
+        }
+        .header{
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 2em;
+            text-align: center;
+            color: white;
+        }
+        .text{
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 1em;
+            text-align: center;
+            color: white;
+        }
+        .container{
+            width: 60%;
+            margin: 5% auto 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
-<h1>p5 Landscape</h1>
 <body>
-<iframe
+<h1 class="header">p5 Landscape</h1>
+<p class="text"> Enjoy this scenic landscape I created in p5.js using primitive objects only! <a href="index.html">Back</a></p>
+<div class="container">
+    <iframe
         src="https://editor.p5js.org/jgs34/full/F3EA6f2KP"
         width="700"
         height="500"
         allow="camera; microphone; geolocation; autoplay; encrypted-media; usb; midi; accelerometer; payment; gyroscope; magnetometer; serial; hid; xr-spatial-tracking; bluetooth; fullscreen"
         style="border: none;"
         allowfullscreen>
-</iframe>
-<a href="index.html">Back</a>
+    </iframe>
+</div>
 
-    targetWindow.postMessage(message, "https://editor.p5js.org");
 
 </body>
 </html>
