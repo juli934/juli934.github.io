@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #5E4955;
+        }
+        .header{
+            color: #C6DDF0;
+            text-align: center;
+            font-size: 2em;
+            font-family: "Bentham", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .text{
+            text-align: center;
+            color: #C99DA3;
+            font-size: 1em;
+            font-family: helvetica;
+        }
+        .image{
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+        .image-container{
+            width: 60%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 10px solid #2A2B2A;
+            border-radius: 12px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #C6DDF0;
+            padding: 15px 0;
+            font-family: "Bentham", serif;
+            font-weight: 400;
+        }
+
+        .top-nav a {
+            color: #2A2B2A;
+            text-decoration: none;
+            font-size: 1.3em;
+            padding: 8px 12px;
+            transition: color 0.3s ease;
+        }
+
+        .top-nav a:hover {
+            color: #996888;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: #996888;
+            }
+
+            .image-container {
+                width: 90%;
+                padding: 10px;
+                border-width: 5px;
+            }
+
+            .bottom-images {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .bottom-images img {
+                width: 90%;
+            }
+
+            .text {
+                font-size: 1.1em;
+                margin: 0 10px 25px;
+            }
+
+            .top-nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 0;
+            }
+
+            .top-nav a {
+                font-size: 1.1em;
+                padding: 6px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="page2.html">About</a>
+    <a href="rwd-start.html">Portfolio</a>
+    <a href="gifshowcase.html">Gif Showcase</a>
+</nav>
+<h1 class="header">
+    Style Sheet
+</h1>
+<p class="text">
+    For my design of my website, I wanted to use a colorful palette that I think reflects my personality. For a closer look at the colors I chose you can review the photo below. Please use <a href="img/pdf%20files/SellsJ_StyleSheet.pdf">this</a>  link to examine the wireframes of my website.You can see my intention with the accesibility of the website and the use of scrolling.
+</p>
+<div class="image-container">
+    <img src="img/colorPalette.jpg" class="image" >
+</div>
+<footer>
+    &copy; 2025 Julianna Sells. All rights reserved.
+</footer>
+</body>
+</html>
