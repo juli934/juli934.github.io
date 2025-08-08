@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Bentham", serif;
+            background-color: #5E4955;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #C6DDF0;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+
+        .nav-links a {
+            color: #2A2B2A;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #996888;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #2A2B2A;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        @media screen and (max-width: 600px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #C6DDF0;
+                padding: 10px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links a {
+                padding: 10px 20px;
+            }
+
+            body {
+                background-color: #996888;
+            }
+        }
+
+        .parent {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1, p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects/individual/style-guide.html">Style Guide</a>
+        <a href="rwd-start.html">Portfolio</a>
+        <a href="projects/individual/gifshowcase.html">Gif Showcase</a>
+    </div>
+</nav>
+
+<div class="parent">
+    <h1>Contact</h1>
+    <p>You can reach me via email at: juliannsells11@gmail.com. My Handshake is Julianna Sells, this will give you a clear idea of what my professional experience is. For an easier route, click <a href="https://uwf.joinhandshake.com/profiles/pnun44">here</a></p>
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>
+<footer>
+    &copy; 2025 Julianna Sells. All rights reserved.
+</footer>
+</body>
+</html>

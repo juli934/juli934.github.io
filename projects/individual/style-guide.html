@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Sheet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #5e4955;
+            margin: 0;
+            font-family: "Bentham", serif;
+        }
+
+        .header {
+            color: #c6ddf0;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 100px;
+        }
+
+        .text {
+            text-align: center;
+            color: #c99da3;
+            font-size: 1em;
+            font-family: helvetica;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+
+        .image-container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 10px solid #2a2b2a;
+            border-radius: 12px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #c6ddf0;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-evenly;
+            flex: 1;
+        }
+
+        .nav-links a {
+            color: #2a2b2a;
+            text-decoration: none;
+            font-size: 1.3em;
+            padding: 8px 12px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #996888;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #2a2b2a;
+            margin: 4px 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #c6ddf0;
+                padding: 10px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.1em;
+                padding: 10px 20px;
+            }
+
+            .image-container {
+                width: 70%;
+                padding: 10px;
+                border-width: 5px;
+            }
+
+            .text {
+                font-size: 1.1em;
+                margin: 0 10px 25px;
+            }
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: #996888;
+            }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="/contact.html">Contact</a>
+        <a href="../../rwd-start.html">Portfolio</a>
+        <a href="gifshowcase.html">Gif Showcase</a>
+    </div>
+</nav>
+
+<h1 class="header">Style Sheet</h1>
+
+<p class="text">
+    For my design of my website, I wanted to use a colorful palette that I think reflects my personality. For a closer
+    look at the colors I chose you can review the photo below. Please use
+    <a href="../../img/pdf%20files/SellsJ_StyleSheet.pdf">this</a> link to examine the wireframes of my website. You
+    can see my intention with the accessibility of the website and the use of scrolling.
+</p>
+
+<div class="image-container">
+    <img src="../../img/storymaterials/colorPalette.jpg" class="image" alt="Color Palette" />
+</div>
+
+<footer>
+    &copy; 2025 Julianna Sells. All rights reserved.
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>

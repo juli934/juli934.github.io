@@ -1,51 +1,137 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>RWD tutorial starter</title>
-        <link href="css/rwd01.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div id="container">
-            <div class="identity">
-                <h1>Julianna Sells portfolio</h1>
-            </div>
-            <div class="imgbox">
-                <p>Some text about my projects. Click on any image for a larger version.</p>
-                <a href="img/image1.jpg">
-                    <img src="img/image1.jpg"
-                    alt="image showing comic strip">
-                </a>
-                <a href="img/image2.jpg">
-                    <img src="img/image2.jpg"
-                    alt="Graphite drawing of still life depicting pillow and nightstand">
-                </a>
-                <a href="img/image3.jpg">
-                    <img src="img/image3.jpg"
-                    alt="close up photo of bark on a tree" />
-                </a>
-                <a href="img/image4.jpg">
-                    <img src="img/image4.jpg"
-                    alt="green lush bush" />
-                </a>
-                <a href="img/image5.jpg">
-                    <img src="img/image5.jpg"
-                    alt="Close up shot of side profile with flash">
-                </a>
-                <a href="img/image6.jpg">
-                    <img src="img/image6.jpg"
-                        alt="close up shot of overgrown bricks">
-                </a>
-                <a href="img/image7.jpg">
-                    <img src="img/image7.jpg"
-                        alt="sand and rocks on the ground with grass">
-                </a>
-                <div class="footie">
-                    <span>&copy;2025 by-nc-sa Thomas Asmuth</span>
-                </div>
-            </div>
+    <title>RWD tutorial starter</title>
+    <link href="css/rwd01.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #5e4955;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #C6DDF0;
+            padding: 15px 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #5e4955;
+            font-size: 1.2em;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #5e4955;
+            margin: 4px 0;
+        }
+
+        @media screen and (max-width: 599px) {
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #C6DDF0;
+                margin-top: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            body {
+                background-color: #996888;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav class="top-nav">
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="rwd-start.html">Portfolio</a>
+        <a href="projects/individual/gifshowcase.html">Gif Showcase</a>
+    </div>
+</nav>
+
+<div id="container">
+    <div class="identity">
+        <h1>Julianna Sells portfolio</h1>
+    </div>
+    <div class="imgbox">
+        <p>Some text about my projects. Click on any image for a larger version.</p>
+        <a href="img/storymaterials/image1.jpg">
+            <img src="img/storymaterials/image1.jpg" alt="image showing comic strip">
+        </a>
+        <a href="img/storymaterials/image2.jpg">
+            <img src="img/storymaterials/image2.jpg" alt="Graphite drawing of still life depicting pillow and nightstand">
+        </a>
+        <a href="img/storymaterials/image3.jpg">
+            <img src="img/storymaterials/image3.jpg" alt="close up photo of bark on a tree" />
+        </a>
+        <a href="img/storymaterials/image4.jpg">
+            <img src="img/storymaterials/image4.jpg" alt="green lush bush" />
+        </a>
+        <a href="img/storymaterials/image5.jpg">
+            <img src="img/storymaterials/image5.jpg" alt="Close up shot of side profile with flash">
+        </a>
+        <a href="img/storymaterials/image6.jpg">
+            <img src="img/storymaterials/image6.jpg" alt="close up shot of overgrown bricks">
+        </a>
+        <a href="img/storymaterials/image7.jpg">
+            <img src="img/storymaterials/image7.jpg" alt="sand and rocks on the ground with grass">
+        </a>
+        <div class="footie">
+            <span>&copy;2025 by-nc-sa Thomas Asmuth</span>
         </div>
-    </body>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Julianna Sells. All rights reserved.
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>
+</body>
 </html>
+
